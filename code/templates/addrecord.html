@@ -1,0 +1,93 @@
+{% include "header.html" %} {% block body %}
+
+
+<div class="panel=heading">
+
+    <h2>Add Record <a class="pull-right btn btn-success" href="/">Back</a> </h2>
+
+</div>
+
+
+
+<div class="panel-body">
+
+    <form action="{{ url_for('procesrecord') }}" method="post">
+        <div class="form-group">
+
+            <label for="elevator_id">Elevator ID</label>
+            <input type=" text " class="form-control " name="elevator_id " id="elevator_id " required="1 ">
+
+        </div>
+
+        <div class="form-group ">
+
+            <label for="number_of_floors ">Current Floor</label>
+            <input type="text " class="form-control " name="number_of_floors " id="number_of_floors " required="1 ">
+
+        </div>
+
+        <div class="form-group ">
+
+            <label for="current_floor ">Current Floor</label>
+            <input type="text " class="form-control " name="current_floor " id="current_floor " required="1 ">
+
+        </div>
+
+
+
+        <div class="form-group ">
+
+            <label for="capacity ">Capacity</label>
+            <input type="text " class="form-control " name="capacity " id="capacity " required=" 1 ">
+
+        </div>
+
+
+
+
+        <div class="form-group ">
+
+            <label for="occupancy ">Occupancy</label>
+            <input type="text " class="form-control " name="occupancy " id="occupancy " required="1 ">
+
+        </div>
+
+
+        <div class="form-group ">
+
+            <label for="is_moving ">Is Moving</label>
+            <input type="text " class="form-control " name="is_moving " id="is_moving " required="1 ">
+
+        </div>
+
+        <div class="form-group ">
+
+            <label for="next_stop_floor">Next Stop Floor</label>
+            <input type=" text " class="form-control " name="next_stop_floor" id="next_stop_floor" required=" 1 ">
+
+        </div>
+
+        <div class="form-group ">
+
+            <label for="resting_floor">Resting Floor</label>
+            <input type=" text " class="form-control " name="resting_floor" id="resting_floor " required="1 ">
+
+        </div>
+
+        <div class="form-group ">
+            <input type="hidden " name="id " value="1 ">
+
+            <input type="hidden " name="action " value="edit ">
+            <input type="submit " class="btn btn-success " name="submit " value="Add Record ">
+
+        </div>
+
+
+    </form>
+
+
+</div>
+
+
+
+{% endblock %}
